@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>StudyHub</h1>
+            <p>Stay focused. Get things done.</p>
+        </div>
+
+        
+    </header>
+
+    <main class="dashboard">
+
+        <section class="welcome">
+            <h2>Good morning, Anudeep 👋</h2>
+            <p>Let's make today productive.</p>
+        </section>
+
+        <section class="stats">
+
+            <div class="card">
+                <span>📚</span>
+                <h3>Tasks</h3>
+
+                <p id="taskCount">0 / 0</p>
+
+                <div class="progress-bar">
+                    <div id="taskProgress"></div>
+                </div>
+
+                <small id="progressText">0% completed</small>
+            </div>
+
+            <div class="card">
+            <span>⏱️</span>
+            <h3>Study Time</h3>
+            <p><span id="studyTime">0</span> min</p>
+            </div>
+
+            <div class="card">
+                <span>🔥</span>
+                <h3>Day Streak</h3>
+                <p>1 day</p>
+            </div>
+
+        </section>
+
+        <section class="content-grid">
+
+            <div class="panel">
+                <h2>Today's Tasks</h2>
+
+                <div class="task-input">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Add a task..."
+                    >
+
+                    <button id="addTask">Add</button>
+                </div>
+
+                <div class="task-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                    
+                </div>
+                <button id="clearCompleted">Clear Completed</button>
+                <ul id="taskList"></ul>
+            </div>
+
+
+            <div class="panel pomodoro">
+                <h2>Pomodoro</h2>
+
+                <div id="timer">25:00</div>
+
+                <button id="startTimer">Start</button>
+                <button id="resetTimer">Reset</button>
+            </div>
+
+        </section>
+
+
+        <section class="panel notes">
+
+            <h2>Quick Notes</h2>
+
+            <textarea
+                id="notes"
+                placeholder="Write something..."
+            ></textarea>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
