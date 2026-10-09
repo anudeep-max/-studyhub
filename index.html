@@ -80,6 +80,17 @@
                 <div id="dailyGoalProgress"></div>
             </div>
             <p id="goalMessage" class="muted" aria-live="polite">Every focused minute counts. Start a Pomodoro to begin tracking.</p>
+            <div class="pomodoro-inline">
+                <div class="timer-ring" aria-hidden="true"><div id="timer">25:00</div><span>Focus session</span></div>
+                <div class="timer-details">
+                    <h3>Pomodoro Timer</h3>
+                    <p class="muted">Stay focused with structured study sessions.</p>
+                    <div class="timer-actions">
+                        <button id="startTimer" type="button">Start</button>
+                        <button id="resetTimer" type="button">Reset</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="panel history-panel" aria-labelledby="studyHistoryHeading">
@@ -113,15 +124,6 @@
                 <ul id="taskList"></ul>
             </div>
 
-
-            <div class="panel pomodoro">
-                <h2>Pomodoro</h2>
-
-                <div id="timer">25:00</div>
-
-                <button id="startTimer">Start</button>
-                <button id="resetTimer">Reset</button>
-            </div>
 
         </section>
 
