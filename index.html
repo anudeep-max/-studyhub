@@ -43,17 +43,49 @@
             </div>
 
             <div class="card">
-            <span>⏱️</span>
-            <h3>Study Time</h3>
-            <p><span id="studyTime">0</span> min</p>
+                <span>⏱️</span>
+                <h3>Total Study Time</h3>
+                <p id="studyTime">0 min</p>
+                <small id="totalStudyDetail">Across all tracked sessions</small>
             </div>
 
             <div class="card">
                 <span>🔥</span>
                 <h3>Day Streak</h3>
-                <p>1 day</p>
+                <p><span id="dayStreak">0</span> <span class="stat-unit">days</span></p>
+                <small id="longestStreak">Longest streak: 0 days</small>
             </div>
 
+        </section>
+
+        <section class="panel study-summary" aria-labelledby="dailySummaryHeading">
+            <div class="summary-heading">
+                <div>
+                    <h2 id="dailySummaryHeading">Today's Study</h2>
+                    <p class="muted">Your time is tracked while the Pomodoro timer is running.</p>
+                </div>
+                <div class="goal-controls">
+                    <label for="dailyGoalInput">Daily goal (minutes)</label>
+                    <div class="goal-input-row">
+                        <input id="dailyGoalInput" type="number" min="1" max="1440" step="5" value="120">
+                        <button id="saveDailyGoal" type="button">Save goal</button>
+                    </div>
+                </div>
+            </div>
+            <div class="today-metrics">
+                <strong id="todayStudyTime">0 min</strong>
+                <span id="dailyGoalStatus">0% of your 120-minute goal</span>
+            </div>
+            <div class="goal-progress" role="progressbar" aria-label="Daily study goal progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div id="dailyGoalProgress"></div>
+            </div>
+            <p id="goalMessage" class="muted" aria-live="polite">Every focused minute counts. Start a Pomodoro to begin tracking.</p>
+        </section>
+
+        <section class="panel history-panel" aria-labelledby="studyHistoryHeading">
+            <h2 id="studyHistoryHeading">Last 7 Days</h2>
+            <p class="muted history-intro">Your tracked study time by day.</p>
+            <div id="studyHistory" class="study-history"></div>
         </section>
 
         <section class="content-grid">

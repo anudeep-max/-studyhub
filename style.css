@@ -460,3 +460,201 @@ button:focus-visible {
 #clearCompleted:hover {
     background: rgba(190, 75, 105, 0.15);
 }
+/* =========================
+   STUDY TRACKING & HISTORY
+========================= */
+.card h3 {
+    color: #a66b7d;
+}
+
+.card small,
+.muted {
+    display: block;
+    margin-top: 8px;
+    color: #a66b7d;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.stat-unit {
+    font-size: 15px !important;
+    font-weight: 500;
+}
+
+.study-summary,
+.history-panel {
+    margin-bottom: 25px;
+}
+
+.summary-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.summary-heading h2,
+.history-panel h2 {
+    margin-bottom: 6px;
+}
+
+.summary-heading .muted,
+.history-intro {
+    margin-top: 0;
+}
+
+.goal-controls {
+    min-width: 225px;
+}
+
+.goal-controls label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8a4057;
+}
+
+.goal-input-row {
+    display: flex;
+    gap: 8px;
+}
+
+.goal-input-row input {
+    min-width: 0;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid rgba(190, 75, 105, 0.25);
+    border-radius: 10px;
+    background: #fffafd;
+    color: #6b3042;
+    font: inherit;
+}
+
+#saveDailyGoal {
+    background: #f7dce4;
+    color: #8a4057;
+    white-space: nowrap;
+}
+
+#saveDailyGoal:hover {
+    background: #f2c8d5;
+}
+
+.today-metrics {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+#todayStudyTime {
+    font-size: 28px;
+    color: #a83e5c;
+}
+
+#dailyGoalStatus {
+    font-size: 14px;
+    color: #a66b7d;
+}
+
+.goal-progress {
+    width: 100%;
+    height: 12px;
+    overflow: hidden;
+    margin-top: 12px;
+    border-radius: 999px;
+    background: #f8e3e9;
+}
+
+#dailyGoalProgress {
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #e9829b, #c94768);
+    transition: width 0.25s ease;
+}
+
+.study-history {
+    display: grid;
+    gap: 13px;
+    margin-top: 18px;
+}
+
+.history-row {
+    display: grid;
+    grid-template-columns: 65px minmax(40px, 1fr) 78px;
+    align-items: center;
+    gap: 12px;
+}
+
+.history-date,
+.history-value {
+    font-size: 13px;
+    color: #8a4057;
+}
+
+.history-value {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.history-bar-track {
+    height: 10px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #f8e3e9;
+}
+
+.history-bar {
+    height: 100%;
+    border-radius: inherit;
+    background: #d95b78;
+    transition: width 0.25s ease;
+}
+
+#taskList li {
+    background: rgba(255, 241, 244, 0.9);
+    color: #6b3042;
+    border: 1px solid rgba(190, 75, 105, 0.12);
+}
+
+.task-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.task-actions button {
+    padding: 7px 10px;
+    background: #f7dce4;
+    color: #8a4057;
+}
+
+.task-actions button:hover {
+    background: #f2c8d5;
+}
+
+#taskList li.completed > span {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    .summary-heading {
+        flex-direction: column;
+    }
+
+    .goal-controls {
+        width: 100%;
+    }
+
+    .goal-input-row input {
+        flex: 1;
+    }
+
+    .history-row {
+        grid-template-columns: 48px minmax(30px, 1fr) 68px;
+        gap: 8px;
+    }
+}
